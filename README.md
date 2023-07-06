@@ -24,8 +24,10 @@ These variables store the file paths of the input files.
 In this step, the tool checks if the directories and files specified in the .csv file exist.
 If output directory does not exist, tool gives a warning and creates an output directory.
 If any of the other files or directories do not exist, tool throws an error.
+
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/ae872131-87e8-4973-91dd-f7eddeea381c)
-If everything all the files are found, the output is as below.
+
+If all the files are found, the output is as below.
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/757db436-78d0-4ecd-8f6d-c05315fefe28)
 
 
