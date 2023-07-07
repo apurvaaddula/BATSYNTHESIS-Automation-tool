@@ -30,6 +30,24 @@ If any of the other files or directories do not exist, tool throws an error.
 If all the files are found, the output is as below.
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/757db436-78d0-4ecd-8f6d-c05315fefe28)
 
+### Converting clock constraints in CSV file to SDC format
+Synopsys Design Constraints (SDC) is the standard format for timing constraints for many tools used in the industry.
+BATSYNTHESIS converts the clock constraints which are given to it in a CSV file into SDC format.
+The input CSV file for timing constraints can be similar to the one below :
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/401dcc37-c8b9-41bd-b417-0679cf34f237)
+These are converted to SDC format. The SDC file which will be created is saved in the output directory with .sdc file extension.
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/818ddb8a-5278-45c6-916f-4551b15e4fc5)
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/19383f92-3493-42cf-8255-66e59c1205e4)
+
+The contents of SDC file are as follows:
+
+1. Clock Constraints
+
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/53e6e3ea-8b9d-488f-b3f9-02410d20ce6c)
+
+
+
+
 
 
 
