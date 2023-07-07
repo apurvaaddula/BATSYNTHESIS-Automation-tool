@@ -36,14 +36,21 @@ BATSYNTHESIS converts the clock constraints which are given to it in a CSV file 
 The input CSV file for timing constraints can be similar to the one below :
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/401dcc37-c8b9-41bd-b417-0679cf34f237)
 These are converted to SDC format. The SDC file which will be created is saved in the output directory with .sdc file extension.
-![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/818ddb8a-5278-45c6-916f-4551b15e4fc5)
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/a7f95de8-831c-4169-8465-1c7ddd252a42)
+
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/19383f92-3493-42cf-8255-66e59c1205e4)
 
-The contents of SDC file are as follows:
-
+SDC File:
 1. Clock Constraints
 
-![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/53e6e3ea-8b9d-488f-b3f9-02410d20ce6c)
+   ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/53e6e3ea-8b9d-488f-b3f9-02410d20ce6c)
+
+2. Input Constraints
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/7540435f-7be1-4351-adf8-b11decc7194f)
+
+3. Output Constraints
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/079f9bba-3532-4102-a431-bbcd75841721)
+
 
 
 
