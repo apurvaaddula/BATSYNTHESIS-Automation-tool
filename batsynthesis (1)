@@ -1,0 +1,40 @@
+#! /bin/tcsh -f
+
+echo "			         BATSYNTHESIS\n\n"
+echo "	This interface takes an RTL netlist and SDC file and generates the"
+echo "		synthesized netlist and pre-layout timing report."
+echo "\n			 Yosys is used for synthesis."
+echo "		 Opentimer is used to generate timing reports."
+echo "\n	"
+echo "	   If you need any help,please contact apurvareddy212@gmail.com."
+
+set work_dir = `pwd`
+
+if ($#argv != 1) then
+	echo "Error: Expecting a single input file of .csv format. Please provide one .csv file."
+	exit 1
+endif
+
+if (! -f $argv[1] || $argv[1] == -help) then
+	if($argv[1] != "-help") then
+		echo "Error: File does not exist. Please provide the correct file name."
+		exit 1
+	else
+		echo "Give an input csv file that contains the following information:"
+		echo "Design Name : Name of top level module."
+		echo "Output Directory : Name of the directory to which the output files generated should be redirected."
+		echo "Netlist Directory : Directory where RTL netlist is available."
+		echo "Early Library Path : The file path for early cell library. It is used to generate the timing reports."
+		echo "Late Library Path : The file path for late cell library. Required to create the timing reports."
+		echo "Constraints File : File path of csv file having constrains. It is used for timing analysis."
+		exit 1
+endif
+
+else
+	echo "Info : Running batsynthesis.tcl..."
+	tclsh batsynthesis.tcl $argv[1]
+endif
+
+		
+	
+
