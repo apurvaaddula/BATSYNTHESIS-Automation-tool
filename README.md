@@ -30,7 +30,7 @@ If any of the other files or directories do not exist, tool throws an error.
 If all the files are found, the output is as below.
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/757db436-78d0-4ecd-8f6d-c05315fefe28)
 
-### Converting clock constraints in CSV file to SDC format
+### Converting timing constraints in CSV file to SDC format
 Synopsys Design Constraints (SDC) is the standard format for timing constraints for many tools used in the industry.
 BATSYNTHESIS converts the clock constraints which are given to it in a CSV file into SDC format.
 The input CSV file for timing constraints can be similar to the one below :
@@ -50,6 +50,28 @@ SDC File:
 
 3. Output Constraints
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/079f9bba-3532-4102-a431-bbcd75841721)
+
+### Hierarchy Check
+Hierarchy check ensures that all the hierarchies in the design are properly connected.
+First the script for hierarchy check for yosys tool is created. 
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/8db3e7fa-20d6-4776-a197-1850f413fa68)
+It is saved in the defined output directory with the extension ".hier.ys".
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/8fc54a52-a0a0-4b08-9a78-e7bcee1db136)
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/f84012bd-bd76-4dbe-8917-91c5fcd03c65)
+
+
+Then the tool checks if all the modules are part of the design. If all modules are correct the hierarchy check is passed. Else, the tool prints an error. Error details can also be viewed in the log file having .hierarchy_check.log which is saved to output directory.
+
+1. If there are no errors :
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/38281408-d9cb-42e9-8e29-838c4a6b7dfc)
+
+2. If there are errors :
+   ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/7d465ff3-d335-4aad-9041-5a5e91cc19b6)
+   Error message in log file,
+   ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/82d0c4cd-193c-46b5-a0b6-b60b304d99b3)
+
+
+
 
 
 
