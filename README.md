@@ -70,6 +70,16 @@ Then the tool checks if all the modules are part of the design. If all modules a
    Error message in log file,
    ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/82d0c4cd-193c-46b5-a0b6-b60b304d99b3)
 
+### Generation of Synthesized Gate Level Netlist
+The Yosys tool generates a synthesized gate level netlist. batsynthesis.tcl script converts this to a final GLN that can be given to opentimer tool to generate timing information.
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/b92cf9ec-80b8-4dcb-a2e6-8a53781d18cd)
+Final Synthsized gate level netlist
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/8ec13fb0-5ac0-4f98-93e4-9dfa5b54d9f2)
+
+### Generation of Timing Report
+Opentimer is used to run pre-layout STA on the synthesized netlist and generate a QOR report.
+
+
 
 
 
