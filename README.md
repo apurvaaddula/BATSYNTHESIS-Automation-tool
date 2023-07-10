@@ -1,7 +1,7 @@
 # BATSYNTHESIS-Automation-tool
 This tool takes RTL netlist and SDC file to auto-generate the synthesized netlist along with pre-layout timing report.
 ---
-BATSYNTHESIS lets you synthesize and get timing information for a netlist at once. It takes a csv file containing the input file paths, like the one below, generates the output files and saves them to the specified output directory.
+BATSYNTHESIS lets you synthesize and get timing information for a netlist. It takes a csv file containing the input file paths, like the one below, generates the output files and saves them to the specified output directory.
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/c8e93925-2538-4251-b910-2119ec74c438)
 
 The tool is developed using shell and TCL scripting languages.
@@ -73,12 +73,20 @@ Then the tool checks if all the modules are part of the design. If all modules a
 ### Generation of Synthesized Gate Level Netlist
 The Yosys tool generates a synthesized gate level netlist. batsynthesis.tcl script converts this to a final GLN that can be given to opentimer tool to generate timing information.
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/b92cf9ec-80b8-4dcb-a2e6-8a53781d18cd)
-Final Synthsized gate level netlist
-![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/8ec13fb0-5ac0-4f98-93e4-9dfa5b54d9f2)
+Final Synthesized gate level netlist
 
-### Generation of Timing Report
-Opentimer is used to run pre-layout STA on the synthesized netlist and generate a QOR report.
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/9f194fdf-04ef-4bde-9d9d-f8a5e610253a)
 
+
+### Generation of QOR Report
+The tool gives the synthesized gate level netlist along with SDC and library file to Opentimer to perform pre-layout STA and generate the QOR pre-layout timing report. Timing constraints are converted from SDC format to a format accepted by Opentimer. The QOR is generated as follows.
+![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/caf73345-faa3-4527-8d7b-319c154567bd)
+
+### Conclusion
+Throughout this project the process of converting CSV files to a format accepted by the tool and generating the required output files has been successfully automated. 
+
+### Acknowledgements
+*Mr. Kunal Ghosh, VLSI System Design*
 
 
 
