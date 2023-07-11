@@ -2,17 +2,17 @@
 This tool takes RTL netlist and SDC file to auto-generate the synthesized netlist along with pre-layout timing report.
 ---
 ## Table Of Contents
-1. [Introduction](./Readme.md#Introduction)
+1. [Introduction](./README.md#Introduction)
 
-2. [Passing the input CSV file from Linux shell to the main script](./Readme.md#Passing-the-input-CSV-file-from-Linux-shell-to-the-main-script)
+2. [Passing the input CSV file from Linux shell to the main script](./README.md#Passing-the-input-CSV-file-from-Linux-shell-to-the-main-script)
 
-3. [Auto-creating variables](./Readme.md#Auto-creating-variables)
-4. [Converting timing constraints in CSV file to SDC format](./Readme.md#Converting-timing-constraints-in-CSV-file-to-SDC-format)
-5. [Hierarchy Check](./Readme.md#Hierachy-Check)
-6. [Generation of Synthesized Gate Level Netlist](./Readme.md#Generation-of-Synthesized-Gate-Level-Netlist)
-7. [Generation of QOR Report](./Readme.md#Generation-of-QOR-Report)
-8. [Conclusion](./Readme.md#Conclusion)
-9. [Acknowledgements](./Readme.md#Acknowledgements)
+3. [Auto-creating variables](./README.md#Auto-creating-variables)
+4. [Converting timing constraints in CSV file to SDC format](./README.md#Converting-timing-constraints-in-CSV-file-to-SDC-format)
+5. [Hierarchy Check](./README.md#Hierachy-Check)
+6. [Generation of Synthesized Gate Level Netlist](./README.md#Generation-of-Synthesized-Gate-Level-Netlist)
+7. [Generation of QOR Report](./README.md#Generation-of-QOR-Report)
+8. [Conclusion](./README.md#Conclusion)
+9. [Acknowledgements](./README.md#Acknowledgements)
 
 ---
 ### Introduction
