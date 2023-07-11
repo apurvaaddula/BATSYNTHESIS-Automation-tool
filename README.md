@@ -1,11 +1,28 @@
 # BATSYNTHESIS-Automation-tool
 This tool takes RTL netlist and SDC file to auto-generate the synthesized netlist along with pre-layout timing report.
 ---
+## Table Of Contents
+1. [Introduction](./Readme.md#Introduction)
+
+2. [Passing the input CSV file from Linux shell to the main script](./Readme.md#Passing-the-input-CSV-file-from-Linux-shell-to-the-main-script)
+
+3. [Auto-creating variables](./Readme.md#Auto-creating-variables)
+4. [Converting timing constraints in CSV file to SDC format](./Readme.md#Converting-timing-constraints-in-CSV-file-to-SDC-format)
+5. [Hierarchy Check](./Readme.md#Hierachy-Check)
+6. [Generation of Synthesized Gate Level Netlist](./Readme.md#Generation-of-Synthesized-Gate-Level-Netlist)
+7. [Generation of QOR Report](./Readme.md#Generation-of-QOR-Report)
+8. [Conclusion](./Readme.md#Conclusion)
+9. [Acknowledgements](./Readme.md#Acknowledgements)
+
+---
+### Introduction
 BATSYNTHESIS lets you synthesize and get timing information for a netlist. It takes a csv file containing the input file paths, like the one below, generates the output files and saves them to the specified output directory.
 
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/c8e93925-2538-4251-b910-2119ec74c438)
 
 The tool is developed using shell and TCL scripting languages.
+
+---
 
 ### Passing the input CSV file from Linux shell to the main script
 #### 1. When the correct file in correct format is given as input in the command line
@@ -18,7 +35,9 @@ The tool is developed using shell and TCL scripting languages.
 #### 4. If the input argument is -help 
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/6ba77318-7452-418f-9ef8-e2772e822b83)
 
-### Auto-creating variables:
+---
+
+### Auto-creating variables
 These variables store the file paths of the input files. 
 
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/58d00c2a-7db5-49ac-80a8-0dc125772806)
@@ -32,6 +51,8 @@ If any of the other files or directories do not exist, tool throws an error.
 If all the files are found, the output is as below.
 
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/757db436-78d0-4ecd-8f6d-c05315fefe28)
+
+---
 
 ### Converting timing constraints in CSV file to SDC format
 Synopsys Design Constraints (SDC) is the standard format for timing constraints for many tools used in the industry.
@@ -59,6 +80,8 @@ SDC File:
 
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/079f9bba-3532-4102-a431-bbcd75841721)
 
+---
+
 ### Hierarchy Check
 Hierarchy check ensures that all the hierarchies in the design are properly connected.
 First the script for hierarchy check for yosys tool is created. 
@@ -85,6 +108,8 @@ Then the tool checks if all the modules are part of the design. If all modules a
    
    ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/82d0c4cd-193c-46b5-a0b6-b60b304d99b3)
 
+---
+
 ### Generation of Synthesized Gate Level Netlist
 The Yosys tool generates a synthesized gate level netlist. batsynthesis.tcl script converts this to a final GLN that can be given to opentimer tool to generate timing information.
 
@@ -94,14 +119,20 @@ Final Synthesized gate level netlist
 
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/9f194fdf-04ef-4bde-9d9d-f8a5e610253a)
 
+---
 
 ### Generation of QOR Report
 The tool gives the synthesized gate level netlist along with SDC and library file to Opentimer to perform pre-layout STA and generate the QOR pre-layout timing report. Timing constraints are converted from SDC format to a format accepted by Opentimer. The QOR is generated as follows.
 
 ![image](https://github.com/apurvaaddula/BATSYNTHESIS-Automation-tool/assets/66956207/caf73345-faa3-4527-8d7b-319c154567bd)
 
+---
+
 ### Conclusion
-Throughout this project the process of converting CSV files to a format accepted by the tool and generating the required output files has been successfully automated. 
+Throughout this project the process of converting CSV files to a format accepted by the tool and generating the required output files 
+has been successfully automated. 
+
+---
 
 ### Acknowledgements
 *Mr. Kunal Ghosh, VLSI System Design*
